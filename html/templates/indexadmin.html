@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>FISHING PRO</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="/static/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="/static/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/static/images/logo.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="/static/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="/static/images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="{{ url_for('indexadmin') }}"><img src="/static/images/logo.png" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="{{ url_for('indexadmin') }}">Inicio</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="{{ url_for('lista_articulos') }}">Lista Productos</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="{{ url_for('ver_vendedors') }}">Empleados</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="{{ url_for('Venta_Pescas') }}">Ventas</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="{{ url_for('Reportes') }}">Reportes</a>
+                              </li>
+                              <li class="nav-item d_none login_btn">
+                                     <a class="nav-link" href="{{ url_for('cerrar_sesion') }}">Cerrar sesion</a>
+                              </li>
+                              <li class="nav-item d_none sea_icon">
+                                 <a class="nav-link" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i><i class="fa fa-search" aria-hidden="true"></i></a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- banner -->
+      <section class="banner_main">
+         <div id="banner1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#banner1" data-slide-to="0" class="active"></li>
+               <li data-target="#banner1" data-slide-to="1"></li>
+               <li data-target="#banner1" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <div class="carousel-caption">
+                        <div class="text-bg">
+                           <h1> <span class="blu">Bienvenido <br></span>ADMINISTRADOR</h1>
+                           <figure><img src="/static/images/banner_img.png" alt="#"/></figure>
+                           <a class="read_more" href="#">Shop Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="carousel-caption">
+                        <div class="text-bg">
+                           <h1> <span class="blu">Bienvenido <br></span>ADMINISTRADOR</h1>
+                           <figure><img src="/static/images/banner1_img.png" alt="#"/></figure>
+                           <a class="read_more" href="#">Shop Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="carousel-caption">
+                        <div class="text-bg">
+                           <h1> <span class="blu">Bienvenido <br></span>ADMINISTRADOR</h1>
+                           <figure><img src="/static/images/banner_img.png" alt="#"/></figure>
+                           <a class="read_more" href="#">Shop Now</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+            <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+         </div>
+      </section>
+      <!-- end banner -->
+       <!-- about section -->
+       <div class="about">
+         <div class="container">
+            <div class="row d_flex">
+               <div class="col-md-5">
+                  <div class="about_img">
+                     <figure><img src="/static/images/about_img.png" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-7">
+                  <div class="titlepage">
+                     <h2>Acerca de nuestra Fishing Pro</h2>
+                     <p>En Fishing Pro, nuestra pasión es la pesca y queremos compartirla contigo. Nos especializamos en la venta de productos de pesca a través de nuestra plataforma en línea, ofreciéndote una experiencia de compra fácil, segura y rápida.
+
+                        Contamos con un amplio catálogo de productos, desde cañas, carretes y señuelos hasta accesorios especializados para todo tipo de pescadores, ya sean principiantes o profesionales. Trabajamos con marcas reconocidas y garantizamos la mejor calidad en cada producto.
+                        
+                        Nuestro objetivo es brindarte las mejores herramientas para que disfrutes al máximo cada jornada de pesca. Además, en Fishing Pro, estamos comprometidos con un excelente servicio al cliente, brindando asesoramiento personalizado y envío a todo el país.
+                        
+                        ¡Explora nuestra tienda y equipa tu próxima gran aventura de pesca con nosotros! 🎣🐟</p>
+                  </div>
+                  <a class="read_more" href="#">Leer Mas</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about section -->
+      <!-- Our  Glasses section -->
+      <div class="glasses">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-10 offset-md-1">
+                  <div class="titlepage">
+                     <h2>Nuestros Productos</h2>                     
+                     <p>En Fishing Pro, la calidad es nuestra prioridad. Nos aseguramos de ofrecerte los mejores productos de pesca, seleccionando cuidadosamente cada artículo para garantizar resistencia, durabilidad y un desempeño excepcional en cada jornada de pesca.
+
+                        Trabajamos con marcas reconocidas y probadas por pescadores expertos, asegurando que cada caña, carrete, señuelo y accesorio cumpla con los más altos estándares. Nuestros productos están diseñados para soportar diferentes condiciones climáticas y tipos de pesca, brindándote seguridad y confianza en cada lanzamiento.
+                        
+                        Además, en Fishing Pro sometemos nuestros productos a estrictos controles de calidad y ofrecemos garantía en cada compra, porque sabemos que tu pasión por la pesca merece lo mejor.
+                        
+                        Confía en Fishing Pro y equípate con lo mejor para cada aventura en el agua. ¡Calidad que marca la diferencia! 🎣🔝
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid">
+            <div class="row">
+               {% for articulo in Art_Tipo %}
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                  <div class="glasses_box">
+                     <figure><img src="{{ url_for('static', filename='images/' + articulo.imagen) }}" alt="#"/></figure>
+                     <h3><span class="blu">$</span>{{ articulo.Precio_A }}</h3>
+                     <p>{{ articulo.Nombre_A }}</p>
+                     <p>{{ articulo.Descripcion_A }}</p>
+                     <p>Stock: {{ articulo.Stock }}</p>
+                     <p>Tipo: {{ articulo.Nombre_TA }}</p>
+                  </div>
+               </div>
+               {% endfor %}
+               <div class="col-md-12">
+                  <a class="read_more" href="#">Ver Mas</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--ur  Glasses section -->
+      <!-- Our shop section -->
+      <div id="about" class="shop">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-5">
+                  <div  class="shop_img">
+                     <figure><img src="/static/images/shop_img.png" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-7 padding_right0">
+                  <div class="max_width">
+                     <div class="titlepage">
+                        <h2>Tienda</h2>
+                        <p>En Fishing Pro, te damos la bienvenida a la mejor tienda en línea especializada en productos de pesca. Nos apasiona este deporte y queremos ofrecerte todo lo que necesitas para disfrutar al máximo cada jornada en el agua.
+
+                           Aquí encontrarás un amplio catálogo de productos de alta calidad, desde cañas y carretes hasta señuelos y accesorios esenciales para cualquier tipo de pesca. Trabajamos con marcas reconocidas y garantizamos durabilidad y rendimiento en cada artículo.
+                        </p>
+                        <a class="read_more" href="#">Comprar Ahora</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Our shop section -->
+      <!-- clients section -->
+      <div class="clients">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Referencias sobre nuestos clientes</h2>
+                     <p>Algunas referencias sobre nuestros queridos clientes</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div id="myCarousel" class="carousel slide clients_Carousel " data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="container">
+                              <div class="carousel-caption ">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="clients_box">
+                                          <figure><img src="/static/images/our.png" alt="#"/></figure>
+                                          <h3>Sansy Mark</h3>
+                                          <p>Mi experiencia en Dermaglow ha sido excepcional. Además de ofrecer productos dermatológicos de calidad, el personal siempre está dispuesto a ayudar y brindar información sobre los productos y tratamientos para la piel. ¡Una clínica dermatológica confiable y amigable!</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="clients_box">
+                                          <figure><img src="/static/images/our.png" alt="#"/></figure>
+                                          <h3>Javier Garcia</h3>
+                                          <p>Dermaglow es mi lugar de referencia para todos mis productos de cuidado de la piel. Siempre me siento bienvenido y bien atendido aquí. El personal es amable, profesional y siempre está dispuesto a responder mis preguntas. ¡Excelente servicio y productos de alta calidad!
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container">
+                              <div class="carousel-caption">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="clients_box">
+                                          <figure><img src="/static/images/our.png" alt="#"/></figure>
+                                          <h3>Alejando Perez</h3>
+                                          <p>Me encanta visitar Dermaglow. Siempre encuentro lo que necesito para el cuidado de mi piel, y el equipo aquí es increíblemente servicial y conocedor. ¡Definitivamente recomendaría Dermaglow a cualquiera que busque atención dermatológica de calidad!
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                     <i class='fa fa-angle-left'></i>
+                     </a>
+                     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                     <i class='fa fa-angle-right'></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end clients section -->
+      <!-- contact section -->
+      <div id="contact" class="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <h3>Contact Us</h3>
+                        </div>
+                        <div class="col-md-12 ">
+                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Email" type="type" name="Email">                          
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactusmess" placeholder="Message" type="type" Message="Name">
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Send</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid">
+            <div class="map_section">
+               <div id="map">
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- end contact section -->
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8 offset-md-2">
+                     <ul class="location_icon">
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> Location</li>
+                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a><br> +01 1234567890</li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> demo@gmail.com</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2019 All Rights Reserved. Design by<a href="#"> Jose Antonio Davila Ochoa</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="/static/js/jquery.min.js"></script>
+      <script src="/static/js/popper.min.js"></script>
+      <script src="/static/js/bootstrap.bundle.min.js"></script>
+      <script src="/static/js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="/static/js/custom.js"></script>
+      <script>
+         // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+         // Australia.
+         function initMap() {
+           var map = new google.maps.Map(document.getElementById('map'), {
+             zoom: 11,
+             center: {lat: 40.645037, lng: -73.880224},
+             });
+         
+         var image = '/static/images/maps-and-flags.png';
+         var beachMarker = new google.maps.Marker({
+             position: {lat: 40.645037, lng: -73.880224},
+             map: map,
+             icon: image
+           });
+         }
+      </script>
+      <!-- google map js -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+      <!-- end google map js --> 
+   </body>
+</html>
+

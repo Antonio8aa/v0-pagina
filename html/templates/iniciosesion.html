@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/logo.png" type="image/gif" />
+    <title>FISHING PRO</title>
+    <link rel="stylesheet" href="/static/css/style2.css">
+</head>
+
+<body>
+    <div class="formulario">
+        <h1>Inicio de sesion</h1>
+        <form method="post" action="{{ url_for('iniciosesion') }}">
+            <div class="username">
+                <input type="text" name="username" required>
+                <label>Nombre de usuario</label>
+            </div>
+            <div class="username">
+                <input type="password" name="password" required>
+                <label>Contraseña</label>
+            </div>
+            <div class="registrarse">
+                ¿No tienes cuenta?  <a href="{{ url_for('registro') }}">Registrarse</a>
+            </div>
+            <input type="submit" value="Iniciar">
+        </form>
+    </div>
+</body>
+<script>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                alert('{{ message }}');
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</script>
+</html>
